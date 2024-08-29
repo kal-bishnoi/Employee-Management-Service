@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS `courses` (
+
+`id` INT AUTO_INCREMENT PRIMARY KEY,
+`title` VARCHAR(30) NOT NULL,
+`duration` INT NOT NULL,
+`author` VARCHAR(30) NOT NULL,
+`created_by` VARCHAR(30) DEFAULT NULL,
+`created_at` DATE DEFAULT NULL,
+`updated_by` VARCHAR(30) DEFAULT NULL,
+`updated_at` DATE DEFAULT NULL
+
+);

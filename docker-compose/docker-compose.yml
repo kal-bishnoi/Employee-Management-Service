@@ -7,6 +7,9 @@ services:
     depends_on:
       config-server:
         condition: service_healthy
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_CONFIG_IMPORT: "configserver:http://config-server:8071/"
     deploy:
       resources:
         limits:
