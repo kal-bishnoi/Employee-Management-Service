@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "employee")
+@Table(name = "courses")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -20,6 +20,7 @@ public class Courses extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Integer id;
 
     @Column(name = "title")
@@ -27,10 +28,12 @@ public class Courses extends BaseEntity {
     @NotNull(message = "Title cannot be empty")
     private String title;
 
+    @Column(name = "duration")
     private Integer duration;
 
     @NotEmpty(message = "Author name cannot be empty")
     @NotNull(message = "Author name cannot be empty")
+    @Column(name = "author")
     private String author;
 
 }
